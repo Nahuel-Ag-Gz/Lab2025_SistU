@@ -175,6 +175,7 @@ public class GUI extends javax.swing.JFrame {
         Buttbuscardocumento = new javax.swing.JButton();
         Sombralistapersona = new javax.swing.JPanel();
         Titulolista = new javax.swing.JLabel();
+        ButtActlista = new javax.swing.JButton();
         Icon = new javax.swing.JPanel();
         iconounsl = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -1114,32 +1115,55 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
+        ButtActlista.setBackground(new java.awt.Color(0, 89, 124));
+        ButtActlista.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ButtActlista.setForeground(new java.awt.Color(255, 255, 255));
+        ButtActlista.setText("Actualizar");
+        ButtActlista.setToolTipText("");
+        ButtActlista.setBorder(null);
+        ButtActlista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtActlistaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PlistapersonaLayout = new javax.swing.GroupLayout(Plistapersona);
         Plistapersona.setLayout(PlistapersonaLayout);
         PlistapersonaLayout.setHorizontalGroup(
             PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PlistapersonaLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDocumentoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PlistapersonaLayout.createSequentialGroup()
+                        .addComponent(txtDocumentoBuscar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Buttbuscardocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PlistapersonaLayout.createSequentialGroup()
-                        .addGap(700, 700, 700)
-                        .addComponent(Buttbuscardocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(153, Short.MAX_VALUE))
+                        .addComponent(scrollPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtActlista, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(137, Short.MAX_VALUE))
             .addComponent(Sombralistapersona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PlistapersonaLayout.setVerticalGroup(
             PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PlistapersonaLayout.createSequentialGroup()
                 .addComponent(Sombralistapersona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
                 .addGroup(PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDocumentoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Buttbuscardocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PlistapersonaLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(txtDocumentoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PlistapersonaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Buttbuscardocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scrollPersonas, javax.swing.GroupLayout.DEFAULT_SIZE, 879, Short.MAX_VALUE)
-                .addGap(25, 25, 25))
+                .addGroup(PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PlistapersonaLayout.createSequentialGroup()
+                        .addComponent(scrollPersonas, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+                        .addGap(25, 25, 25))
+                    .addGroup(PlistapersonaLayout.createSequentialGroup()
+                        .addComponent(ButtActlista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         Icon.setBackground(new java.awt.Color(255, 255, 255));
@@ -2265,6 +2289,10 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
             txtDocumentoBuscar.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_txtDocumentoBuscarFocusLost
+
+    private void ButtActlistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtActlistaActionPerformed
+     mostrarListaEnGUI(lista);
+    }//GEN-LAST:event_ButtActlistaActionPerformed
      
     private void mostrarSoloPanel(JPanel panelMostrado) {
          Icon.setVisible(false);
@@ -2281,6 +2309,7 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtActlista;
     private javax.swing.JButton Buttactualizar;
     private javax.swing.JButton Buttbuscardocumento;
     private javax.swing.JButton Buttcarga;

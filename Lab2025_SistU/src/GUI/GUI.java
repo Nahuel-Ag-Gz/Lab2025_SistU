@@ -80,7 +80,7 @@ public class GUI extends javax.swing.JFrame {
         Lmateriascargadas.setVisible(false);
         materiascargadas.setVisible(false);
         Butteliminarmateria.setVisible(false);
-        PanelINFO.setVisible(false);
+        
         
         
         
@@ -95,64 +95,6 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
-        PanelINFO = new javax.swing.JPanel();
-        HeaderINFO = new javax.swing.JPanel();
-        LabDatos = new javax.swing.JLabel();
-        eXitINFO = new javax.swing.JPanel();
-        X = new javax.swing.JLabel();
-        PcargauserINFO = new javax.swing.JPanel();
-        nombre1 = new javax.swing.JLabel();
-        documento1 = new javax.swing.JLabel();
-        direccion1 = new javax.swing.JLabel();
-        Tnombre1 = new javax.swing.JTextField();
-        Tdocumento1 = new javax.swing.JTextField();
-        fechanacimiento1 = new javax.swing.JLabel();
-        Tdia1 = new javax.swing.JTextField();
-        Tmes1 = new javax.swing.JTextField();
-        Tanio1 = new javax.swing.JTextField();
-        Tdireccion1 = new javax.swing.JTextField();
-        Tfacultad1 = new javax.swing.JTextField();
-        Tcarrera1 = new javax.swing.JTextField();
-        facultad1 = new javax.swing.JLabel();
-        carrera1 = new javax.swing.JLabel();
-        Tmesing1 = new javax.swing.JTextField();
-        Tanioing1 = new javax.swing.JTextField();
-        fechaingreso1 = new javax.swing.JLabel();
-        Tdiaing1 = new javax.swing.JTextField();
-        Stipopersona1 = new javax.swing.JComboBox<>();
-        tipopersona1 = new javax.swing.JLabel();
-        jSeparator5 = new javax.swing.JSeparator();
-        jSeparator14 = new javax.swing.JSeparator();
-        jSeparator15 = new javax.swing.JSeparator();
-        jSeparator16 = new javax.swing.JSeparator();
-        jSeparator17 = new javax.swing.JSeparator();
-        jSeparator18 = new javax.swing.JSeparator();
-        jSeparator19 = new javax.swing.JSeparator();
-        jSeparator20 = new javax.swing.JSeparator();
-        jSeparator21 = new javax.swing.JSeparator();
-        jSeparator22 = new javax.swing.JSeparator();
-        jSeparator23 = new javax.swing.JSeparator();
-        PtipouserINFO = new javax.swing.JPanel();
-        Puseraccion1 = new javax.swing.JPanel();
-        registro1 = new javax.swing.JLabel();
-        Tregistro1 = new javax.swing.JTextField();
-        SepRegist1 = new javax.swing.JSeparator();
-        cargo1 = new javax.swing.JLabel();
-        Tcargo1 = new javax.swing.JTextField();
-        sepCargo1 = new javax.swing.JSeparator();
-        Tcarrerapostgrado1 = new javax.swing.JTextField();
-        SepCarrera1 = new javax.swing.JSeparator();
-        carrerapostgrado1 = new javax.swing.JLabel();
-        materia1 = new javax.swing.JLabel();
-        Tmaterias1 = new javax.swing.JTextField();
-        setmaterias1 = new javax.swing.JSeparator();
-        Buttcargamaterias1 = new javax.swing.JButton();
-        materiascargadas1 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        Lmateriascargadas1 = new javax.swing.JList<>();
-        Butteliminarmateria1 = new javax.swing.JButton();
-        Buttcargapersona1 = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         eXit = new javax.swing.JPanel();
         eXitcont = new javax.swing.JLabel();
@@ -236,568 +178,6 @@ public class GUI extends javax.swing.JFrame {
         Icon = new javax.swing.JPanel();
         iconounsl = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        PanelINFO.setBackground(new java.awt.Color(255, 255, 255));
-        PanelINFO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 139, 144)));
-        PanelINFO.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        HeaderINFO.setBackground(new java.awt.Color(0, 139, 144));
-        HeaderINFO.setForeground(new java.awt.Color(255, 255, 255));
-        HeaderINFO.setToolTipText("");
-        HeaderINFO.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
-        HeaderINFO.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                HeaderINFOMouseDragged(evt);
-            }
-        });
-        HeaderINFO.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HeaderINFOMouseClicked(evt);
-            }
-        });
-        HeaderINFO.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LabDatos.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        LabDatos.setForeground(new java.awt.Color(255, 255, 255));
-        LabDatos.setText("Datos");
-        HeaderINFO.add(LabDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 67, -1));
-
-        eXitINFO.setBackground(new java.awt.Color(0, 139, 144));
-        eXitINFO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        eXitINFO.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                eXitINFOMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                eXitINFOMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                eXitINFOMouseExited(evt);
-            }
-        });
-
-        X.setFont(new java.awt.Font("Segoe UI Symbol", 1, 16)); // NOI18N
-        X.setForeground(new java.awt.Color(255, 255, 255));
-        X.setText("X");
-
-        javax.swing.GroupLayout eXitINFOLayout = new javax.swing.GroupLayout(eXitINFO);
-        eXitINFO.setLayout(eXitINFOLayout);
-        eXitINFOLayout.setHorizontalGroup(
-            eXitINFOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-            .addGroup(eXitINFOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(eXitINFOLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(X)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        eXitINFOLayout.setVerticalGroup(
-            eXitINFOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 38, Short.MAX_VALUE)
-            .addGroup(eXitINFOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(eXitINFOLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(X)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        HeaderINFO.add(eXitINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 50, 40));
-
-        PanelINFO.add(HeaderINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 40));
-
-        PcargauserINFO.setBackground(new java.awt.Color(255, 255, 255));
-        PcargauserINFO.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        nombre1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nombre1.setText("Nombre");
-        PcargauserINFO.add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
-
-        documento1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        documento1.setText("Documento");
-        PcargauserINFO.add(documento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
-
-        direccion1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        direccion1.setText("Direccion");
-        PcargauserINFO.add(direccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
-
-        Tnombre1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tnombre1.setForeground(new java.awt.Color(153, 153, 153));
-        Tnombre1.setText("Ingrese su Nombre");
-        Tnombre1.setBorder(null);
-        Tnombre1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tnombre1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tnombre1FocusLost(evt);
-            }
-        });
-        Tnombre1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tnombre1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Tnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 260, -1));
-
-        Tdocumento1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tdocumento1.setForeground(new java.awt.Color(153, 153, 153));
-        Tdocumento1.setText("Ingrese su Documento");
-        Tdocumento1.setBorder(null);
-        Tdocumento1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tdocumento1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tdocumento1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tdocumento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 260, -1));
-
-        fechanacimiento1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        fechanacimiento1.setText("Fecha de Nacimiento");
-        PcargauserINFO.add(fechanacimiento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
-
-        Tdia1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tdia1.setForeground(new java.awt.Color(153, 153, 153));
-        Tdia1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tdia1.setText("Dia");
-        Tdia1.setBorder(null);
-        Tdia1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tdia1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tdia1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tdia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 80, -1));
-
-        Tmes1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tmes1.setForeground(new java.awt.Color(153, 153, 153));
-        Tmes1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tmes1.setText("Mes");
-        Tmes1.setBorder(null);
-        Tmes1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tmes1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tmes1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tmes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 80, -1));
-
-        Tanio1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tanio1.setForeground(new java.awt.Color(153, 153, 153));
-        Tanio1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tanio1.setText("Año");
-        Tanio1.setBorder(null);
-        Tanio1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tanio1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tanio1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tanio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 80, -1));
-
-        Tdireccion1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tdireccion1.setForeground(new java.awt.Color(153, 153, 153));
-        Tdireccion1.setText("Ingrese su Direccion");
-        Tdireccion1.setBorder(null);
-        Tdireccion1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tdireccion1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tdireccion1FocusLost(evt);
-            }
-        });
-        Tdireccion1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tdireccion1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Tdireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 260, -1));
-
-        Tfacultad1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tfacultad1.setForeground(new java.awt.Color(153, 153, 153));
-        Tfacultad1.setText("Ingrese su Facultad");
-        Tfacultad1.setBorder(null);
-        Tfacultad1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tfacultad1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tfacultad1FocusLost(evt);
-            }
-        });
-        Tfacultad1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tfacultad1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Tfacultad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 260, -1));
-
-        Tcarrera1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tcarrera1.setForeground(new java.awt.Color(153, 153, 153));
-        Tcarrera1.setText("Ingrese su carrera");
-        Tcarrera1.setBorder(null);
-        Tcarrera1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tcarrera1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tcarrera1FocusLost(evt);
-            }
-        });
-        Tcarrera1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tcarrera1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Tcarrera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, 230, 20));
-
-        facultad1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        facultad1.setText("Facultad");
-        PcargauserINFO.add(facultad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 6, -1, -1));
-
-        carrera1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        carrera1.setText("Carrera");
-        PcargauserINFO.add(carrera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, 20));
-
-        Tmesing1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tmesing1.setForeground(new java.awt.Color(153, 153, 153));
-        Tmesing1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tmesing1.setText("Mes");
-        Tmesing1.setBorder(null);
-        Tmesing1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tmesing1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tmesing1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tmesing1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 80, 20));
-
-        Tanioing1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tanioing1.setForeground(new java.awt.Color(153, 153, 153));
-        Tanioing1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tanioing1.setText("Año");
-        Tanioing1.setBorder(null);
-        Tanioing1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tanioing1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tanioing1FocusLost(evt);
-            }
-        });
-        PcargauserINFO.add(Tanioing1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 80, 20));
-
-        fechaingreso1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        fechaingreso1.setText("Fecha de Ingreso");
-        PcargauserINFO.add(fechaingreso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, -1, -1));
-
-        Tdiaing1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tdiaing1.setForeground(new java.awt.Color(153, 153, 153));
-        Tdiaing1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Tdiaing1.setText("Dia");
-        Tdiaing1.setBorder(null);
-        Tdiaing1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tdiaing1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tdiaing1FocusLost(evt);
-            }
-        });
-        Tdiaing1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tdiaing1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Tdiaing1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 80, 20));
-
-        Stipopersona1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Stipopersona1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione un Tipo", "Alumno", "Alumno de Postgrado", "Docente" }));
-        Stipopersona1.setBorder(new javax.swing.border.MatteBorder(null));
-        Stipopersona1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Stipopersona1ActionPerformed(evt);
-            }
-        });
-        PcargauserINFO.add(Stipopersona1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, -1, -1));
-
-        tipopersona1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        tipopersona1.setText("Tipo de persona");
-        PcargauserINFO.add(tipopersona1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
-
-        jSeparator5.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 260, 10));
-
-        jSeparator14.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 260, 10));
-
-        jSeparator15.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 80, 10));
-
-        jSeparator16.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 80, 10));
-
-        jSeparator17.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 80, 10));
-
-        jSeparator18.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 260, 10));
-
-        jSeparator19.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 260, 10));
-
-        jSeparator20.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 80, 10));
-
-        jSeparator21.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 80, 10));
-
-        jSeparator22.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, 80, 10));
-
-        jSeparator23.setForeground(new java.awt.Color(0, 89, 124));
-        PcargauserINFO.add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 230, 10));
-
-        PanelINFO.add(PcargauserINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 700, 235));
-
-        PtipouserINFO.setBackground(new java.awt.Color(255, 255, 255));
-        PtipouserINFO.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Puseraccion1.setBackground(new java.awt.Color(255, 255, 255));
-
-        registro1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        registro1.setText("Registro");
-
-        Tregistro1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tregistro1.setForeground(new java.awt.Color(153, 153, 153));
-        Tregistro1.setText("Ingrese su Registro");
-        Tregistro1.setBorder(null);
-        Tregistro1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tregistro1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tregistro1FocusLost(evt);
-            }
-        });
-
-        SepRegist1.setForeground(new java.awt.Color(0, 89, 124));
-
-        cargo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cargo1.setText("Cargo");
-
-        Tcargo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tcargo1.setForeground(new java.awt.Color(153, 153, 153));
-        Tcargo1.setText("Ingrese su Cargo");
-        Tcargo1.setBorder(null);
-        Tcargo1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tcargo1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tcargo1FocusLost(evt);
-            }
-        });
-        Tcargo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tcargo1ActionPerformed(evt);
-            }
-        });
-
-        sepCargo1.setForeground(new java.awt.Color(0, 89, 124));
-
-        Tcarrerapostgrado1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tcarrerapostgrado1.setForeground(new java.awt.Color(153, 153, 153));
-        Tcarrerapostgrado1.setText("Ingrese su Carrera");
-        Tcarrerapostgrado1.setBorder(null);
-        Tcarrerapostgrado1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tcarrerapostgrado1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tcarrerapostgrado1FocusLost(evt);
-            }
-        });
-
-        SepCarrera1.setForeground(new java.awt.Color(0, 89, 124));
-
-        carrerapostgrado1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        carrerapostgrado1.setText("Carrera de Postgrado");
-
-        materia1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        materia1.setText("Materias");
-
-        Tmaterias1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Tmaterias1.setForeground(new java.awt.Color(153, 153, 153));
-        Tmaterias1.setText("Ingrese su Materia");
-        Tmaterias1.setBorder(null);
-        Tmaterias1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                Tmaterias1FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                Tmaterias1FocusLost(evt);
-            }
-        });
-
-        setmaterias1.setForeground(new java.awt.Color(0, 89, 124));
-
-        Buttcargamaterias1.setBackground(new java.awt.Color(0, 89, 124));
-        Buttcargamaterias1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Buttcargamaterias1.setForeground(new java.awt.Color(255, 255, 255));
-        Buttcargamaterias1.setText("Carga");
-        Buttcargamaterias1.setBorder(null);
-        Buttcargamaterias1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttcargamaterias1ActionPerformed(evt);
-            }
-        });
-
-        materiascargadas1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        materiascargadas1.setText("Materias Cargadas");
-
-        Lmateriascargadas1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        Lmateriascargadas1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jScrollPane3.setViewportView(Lmateriascargadas1);
-
-        Butteliminarmateria1.setBackground(new java.awt.Color(0, 89, 124));
-        Butteliminarmateria1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Butteliminarmateria1.setForeground(new java.awt.Color(255, 255, 255));
-        Butteliminarmateria1.setText("Eliminar");
-        Butteliminarmateria1.setBorder(null);
-        Butteliminarmateria1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Butteliminarmateria1ActionPerformed(evt);
-            }
-        });
-
-        Buttcargapersona1.setBackground(new java.awt.Color(0, 89, 124));
-        Buttcargapersona1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Buttcargapersona1.setForeground(new java.awt.Color(255, 255, 255));
-        Buttcargapersona1.setText("Cargar Persona");
-        Buttcargapersona1.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
-        Buttcargapersona1.setMaximumSize(new java.awt.Dimension(160, 95));
-        Buttcargapersona1.setMinimumSize(new java.awt.Dimension(160, 95));
-        Buttcargapersona1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttcargapersona1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Puseraccion1Layout = new javax.swing.GroupLayout(Puseraccion1);
-        Puseraccion1.setLayout(Puseraccion1Layout);
-        Puseraccion1Layout.setHorizontalGroup(
-            Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Buttcargapersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Puseraccion1Layout.createSequentialGroup()
-                        .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(carrerapostgrado1)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addComponent(registro1)
-                                .addGap(14, 14, 14)
-                                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SepRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Tregistro1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(SepCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tcarrerapostgrado1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addComponent(cargo1)
-                                .addGap(12, 12, 12)
-                                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Tcargo1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sepCargo1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addComponent(materia1)
-                                .addGap(13, 13, 13)
-                                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                        .addComponent(Tmaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Buttcargamaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(setmaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(materiascargadas1)
-                                .addGap(53, 53, 53)
-                                .addComponent(Butteliminarmateria1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        Puseraccion1Layout.setVerticalGroup(
-            Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                .addGap(3, 3, 3)
-                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(registro1)
-                    .addGroup(Puseraccion1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(SepRegist1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Tregistro1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(materiascargadas1)
-                        .addComponent(Butteliminarmateria1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Puseraccion1Layout.createSequentialGroup()
-                        .addComponent(carrerapostgrado1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(SepCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Tcarrerapostgrado1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cargo1)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addComponent(Tcargo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(sepCargo1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(materia1)
-                            .addGroup(Puseraccion1Layout.createSequentialGroup()
-                                .addGroup(Puseraccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Tmaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Buttcargamaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)
-                                .addComponent(setmaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(Buttcargapersona1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        PtipouserINFO.add(Puseraccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        PanelINFO.add(PtipouserINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 910, 330));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1683,7 +1063,20 @@ public class GUI extends javax.swing.JFrame {
         scrollPersonas.setViewportView(Plistapersonas);
 
         txtDocumentoBuscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtDocumentoBuscar.setText("Buscar por Documento");
+        txtDocumentoBuscar.setText("Ingrese el Documento de la Persona");
+        txtDocumentoBuscar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtDocumentoBuscarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtDocumentoBuscarFocusLost(evt);
+            }
+        });
+        txtDocumentoBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDocumentoBuscarActionPerformed(evt);
+            }
+        });
 
         Buttbuscardocumento.setBackground(new java.awt.Color(0, 89, 124));
         Buttbuscardocumento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -1795,11 +1188,11 @@ public class GUI extends javax.swing.JFrame {
         );
         PanelUserLayout.setVerticalGroup(
             PanelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Plistapersona, javax.swing.GroupLayout.DEFAULT_SIZE, 1007, Short.MAX_VALUE)
+            .addComponent(Plistapersona, javax.swing.GroupLayout.DEFAULT_SIZE, 1208, Short.MAX_VALUE)
             .addGroup(PanelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Pcargapersona, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1007, Short.MAX_VALUE))
+                .addComponent(Pcargapersona, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1208, Short.MAX_VALUE))
             .addGroup(PanelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Icon, javax.swing.GroupLayout.DEFAULT_SIZE, 1007, Short.MAX_VALUE))
+                .addComponent(Icon, javax.swing.GroupLayout.DEFAULT_SIZE, 1208, Short.MAX_VALUE))
         );
 
         Plistapersona.getAccessibleContext().setAccessibleName("");
@@ -1824,7 +1217,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(eXit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelUser, javax.swing.GroupLayout.DEFAULT_SIZE, 1007, Short.MAX_VALUE)
+                    .addComponent(PanelUser, javax.swing.GroupLayout.DEFAULT_SIZE, 1208, Short.MAX_VALUE)
                     .addComponent(PanelAccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -2254,7 +1647,7 @@ public void mostrarListaEnGUI(ListaPersonas lista) {
 }
   private void resaltarPanel(JPanel panel) {
     Color original = panel.getBackground();
-    Color resaltado = new Color(0,205,242 );  // Amarillo claro
+    Color resaltado = new Color(0,128,176 );  // Amarillo claro
 
     Timer timer = new Timer(300, null); // Cada 300ms
     final int[] contador = {0};
@@ -2855,193 +2248,24 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
         // TODO add your handling code here:
     }//GEN-LAST:event_Buttcargapersona3ActionPerformed
 
-    private void Tnombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tnombre1FocusGained
+    private void txtDocumentoBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocumentoBuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Tnombre1FocusGained
+    }//GEN-LAST:event_txtDocumentoBuscarActionPerformed
 
-    private void Tnombre1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tnombre1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tnombre1FocusLost
+    private void txtDocumentoBuscarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDocumentoBuscarFocusGained
+ if (txtDocumentoBuscar.getText().equals("Ingrese el Documento de la Persona")) {
+            txtDocumentoBuscar.setText("");
+            txtDocumentoBuscar.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtDocumentoBuscarFocusGained
 
-    private void Tnombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tnombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tnombre1ActionPerformed
-
-    private void Tdocumento1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdocumento1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdocumento1FocusGained
-
-    private void Tdocumento1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdocumento1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdocumento1FocusLost
-
-    private void Tdia1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdia1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdia1FocusGained
-
-    private void Tdia1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdia1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdia1FocusLost
-
-    private void Tmes1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmes1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmes1FocusGained
-
-    private void Tmes1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmes1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmes1FocusLost
-
-    private void Tanio1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tanio1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tanio1FocusGained
-
-    private void Tanio1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tanio1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tanio1FocusLost
-
-    private void Tdireccion1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdireccion1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdireccion1FocusGained
-
-    private void Tdireccion1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdireccion1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdireccion1FocusLost
-
-    private void Tdireccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tdireccion1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdireccion1ActionPerformed
-
-    private void Tfacultad1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tfacultad1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tfacultad1FocusGained
-
-    private void Tfacultad1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tfacultad1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tfacultad1FocusLost
-
-    private void Tfacultad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tfacultad1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tfacultad1ActionPerformed
-
-    private void Tcarrera1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcarrera1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcarrera1FocusGained
-
-    private void Tcarrera1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcarrera1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcarrera1FocusLost
-
-    private void Tcarrera1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tcarrera1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcarrera1ActionPerformed
-
-    private void Tmesing1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmesing1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmesing1FocusGained
-
-    private void Tmesing1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmesing1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmesing1FocusLost
-
-    private void Tanioing1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tanioing1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tanioing1FocusGained
-
-    private void Tanioing1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tanioing1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tanioing1FocusLost
-
-    private void Tdiaing1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdiaing1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdiaing1FocusGained
-
-    private void Tdiaing1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tdiaing1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdiaing1FocusLost
-
-    private void Tdiaing1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tdiaing1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tdiaing1ActionPerformed
-
-    private void Stipopersona1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stipopersona1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Stipopersona1ActionPerformed
-
-    private void Tregistro1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tregistro1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tregistro1FocusGained
-
-    private void Tregistro1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tregistro1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tregistro1FocusLost
-
-    private void Tcargo1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcargo1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcargo1FocusGained
-
-    private void Tcargo1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcargo1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcargo1FocusLost
-
-    private void Tcargo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tcargo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcargo1ActionPerformed
-
-    private void Tcarrerapostgrado1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcarrerapostgrado1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcarrerapostgrado1FocusGained
-
-    private void Tcarrerapostgrado1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tcarrerapostgrado1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tcarrerapostgrado1FocusLost
-
-    private void Tmaterias1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmaterias1FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmaterias1FocusGained
-
-    private void Tmaterias1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Tmaterias1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tmaterias1FocusLost
-
-    private void Buttcargamaterias1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttcargamaterias1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Buttcargamaterias1ActionPerformed
-
-    private void Butteliminarmateria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Butteliminarmateria1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Butteliminarmateria1ActionPerformed
-
-    private void Buttcargapersona1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttcargapersona1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Buttcargapersona1ActionPerformed
-
-    private void eXitINFOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_eXitINFOMouseClicked
-
-    private void eXitINFOMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseEntered
-      eXitINFO.setBackground(Color.white);
-      X.setForeground(Color.RED);
-    }//GEN-LAST:event_eXitINFOMouseEntered
+    private void txtDocumentoBuscarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDocumentoBuscarFocusLost
+               if (txtDocumentoBuscar.getText().isEmpty()) {
+            txtDocumentoBuscar.setText("Ingrese el Documento de la Persona");
+            txtDocumentoBuscar.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtDocumentoBuscarFocusLost
      
-    private void eXitINFOMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseExited
-       eXitINFO.setBackground(new Color(0,89,124));
-      X.setForeground(Color.white);
-    }//GEN-LAST:event_eXitINFOMouseExited
-
-    private void HeaderINFOMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderINFOMouseDragged
-
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xMouseINFO,y- yMouseINFO);
-        
-    }//GEN-LAST:event_HeaderINFOMouseDragged
-
-    private void HeaderINFOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderINFOMouseClicked
-        xMouseINFO = evt.getX();
-        yMouseINFO = evt.getY();
-    }//GEN-LAST:event_HeaderINFOMouseClicked
-
     private void mostrarSoloPanel(JPanel panelMostrado) {
          Icon.setVisible(false);
         Pcargauser.setVisible(false);
@@ -3061,141 +2285,83 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
     private javax.swing.JButton Buttbuscardocumento;
     private javax.swing.JButton Buttcarga;
     private javax.swing.JButton Buttcargamaterias;
-    private javax.swing.JButton Buttcargamaterias1;
     private javax.swing.JButton Buttcargapersona;
-    private javax.swing.JButton Buttcargapersona1;
     private javax.swing.JButton Butteliminarmateria;
-    private javax.swing.JButton Butteliminarmateria1;
     private javax.swing.JPanel Header1;
-    private javax.swing.JPanel HeaderINFO;
     private javax.swing.JPanel Icon;
     private javax.swing.JLabel Iconaccion;
-    private javax.swing.JLabel LabDatos;
     private javax.swing.JLabel Lbldocumento;
     private javax.swing.JLabel Lblnombre;
     private javax.swing.JLabel Lbltipo;
     private javax.swing.JList<String> Lmateriascargadas;
-    private javax.swing.JList<String> Lmateriascargadas1;
     private javax.swing.JPanel Main;
     private javax.swing.JPanel Paccion;
     private javax.swing.JPanel PanelAccion;
-    private javax.swing.JPanel PanelINFO;
     private javax.swing.JPanel PanelUser;
     private javax.swing.JPanel Pcargapersona;
     private javax.swing.JPanel Pcargauser;
-    private javax.swing.JPanel PcargauserINFO;
     private javax.swing.JPanel Plistapersona;
     private javax.swing.JPanel Plistapersonas;
     private javax.swing.JPanel Ptipouser;
-    private javax.swing.JPanel PtipouserINFO;
     private javax.swing.JPanel Puseraccion;
-    private javax.swing.JPanel Puseraccion1;
     private javax.swing.JSeparator SepCarrera;
-    private javax.swing.JSeparator SepCarrera1;
     private javax.swing.JSeparator SepRegist;
-    private javax.swing.JSeparator SepRegist1;
     private javax.swing.JPanel Sombracargapersona;
     private javax.swing.JPanel Sombralistapersona;
     private javax.swing.JComboBox<String> Stipopersona;
-    private javax.swing.JComboBox<String> Stipopersona1;
     private javax.swing.JTextField Tanio;
-    private javax.swing.JTextField Tanio1;
     private javax.swing.JTextField Tanioing;
-    private javax.swing.JTextField Tanioing1;
     private javax.swing.JTextField Tcargo;
-    private javax.swing.JTextField Tcargo1;
     private javax.swing.JTextField Tcarrera;
-    private javax.swing.JTextField Tcarrera1;
     private javax.swing.JTextField Tcarrerapostgrado;
-    private javax.swing.JTextField Tcarrerapostgrado1;
     private javax.swing.JTextField Tdia;
-    private javax.swing.JTextField Tdia1;
     private javax.swing.JTextField Tdiaing;
-    private javax.swing.JTextField Tdiaing1;
     private javax.swing.JTextField Tdireccion;
-    private javax.swing.JTextField Tdireccion1;
     private javax.swing.JTextField Tdocumento;
-    private javax.swing.JTextField Tdocumento1;
     private javax.swing.JTextField Tfacultad;
-    private javax.swing.JTextField Tfacultad1;
     private javax.swing.JLabel Titulolista;
     private javax.swing.JLabel Titulolista1;
     private javax.swing.JTextField Tmaterias;
-    private javax.swing.JTextField Tmaterias1;
     private javax.swing.JTextField Tmes;
-    private javax.swing.JTextField Tmes1;
     private javax.swing.JTextField Tmesing;
-    private javax.swing.JTextField Tmesing1;
     private javax.swing.JTextField Tnombre;
-    private javax.swing.JTextField Tnombre1;
     private javax.swing.JTextField Tregistro;
-    private javax.swing.JTextField Tregistro1;
-    private javax.swing.JLabel X;
     private javax.swing.JLabel cargo;
-    private javax.swing.JLabel cargo1;
     private javax.swing.JLabel carrera;
-    private javax.swing.JLabel carrera1;
     private javax.swing.JLabel carrerapostgrado;
-    private javax.swing.JLabel carrerapostgrado1;
     private javax.swing.JLabel direccion;
-    private javax.swing.JLabel direccion1;
     private javax.swing.JLabel documento;
-    private javax.swing.JLabel documento1;
     private javax.swing.JPanel eXit;
-    private javax.swing.JPanel eXitINFO;
     private javax.swing.JLabel eXitcont;
     private javax.swing.JLabel facultad;
-    private javax.swing.JLabel facultad1;
     private javax.swing.JLabel fechaingreso;
-    private javax.swing.JLabel fechaingreso1;
     private javax.swing.JLabel fechanacimiento;
-    private javax.swing.JLabel fechanacimiento1;
     private javax.swing.JLabel iconounsl;
     private javax.swing.JButton jButton1;
-    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
-    private javax.swing.JSeparator jSeparator14;
-    private javax.swing.JSeparator jSeparator15;
-    private javax.swing.JSeparator jSeparator16;
-    private javax.swing.JSeparator jSeparator17;
-    private javax.swing.JSeparator jSeparator18;
-    private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator20;
-    private javax.swing.JSeparator jSeparator21;
-    private javax.swing.JSeparator jSeparator22;
-    private javax.swing.JSeparator jSeparator23;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JLabel materia;
-    private javax.swing.JLabel materia1;
     private javax.swing.JLabel materiascargadas;
-    private javax.swing.JLabel materiascargadas1;
     private javax.swing.JLabel nombre;
-    private javax.swing.JLabel nombre1;
     private javax.swing.JLabel registro;
-    private javax.swing.JLabel registro1;
     private javax.swing.JScrollPane scrollPersonas;
     private javax.swing.JSeparator sepCargo;
-    private javax.swing.JSeparator sepCargo1;
     private javax.swing.JSeparator setmaterias;
-    private javax.swing.JSeparator setmaterias1;
     private javax.swing.JLabel tipopersona;
-    private javax.swing.JLabel tipopersona1;
     private javax.swing.JLabel titulo;
     private javax.swing.JTextField txtDocumentoBuscar;
     // End of variables declaration//GEN-END:variables

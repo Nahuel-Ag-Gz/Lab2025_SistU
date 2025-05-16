@@ -1027,6 +1027,46 @@ public class PantallaINFO extends javax.swing.JFrame {
         int[] fechaNac = {diaNac, mesNac, anioNac};
         int[] fechaIngre = {diaIng, mesIng, anioIng};
 
+    // Datos específicos
+    if (personaSeleccionada instanceof Alumno alumno) {
+        String registro = Tregistro1.getText().trim();
+        alumno.setNbre(nombre);
+        alumno.setDoc(documento);
+        alumno.setDir(direccion);
+        alumno.setfNac(fNac);
+        alumno.setFac(Tfacultad1.getText().trim());
+        alumno.setCar(Tcarrera1.getText().trim());
+        alumno.setfIng(fIng);
+        alumno.setReg(registro);
+    } else if (personaSeleccionada instanceof AlumnoPostGrado post) {
+        String registro = Tregistro1.getText().trim();
+        String carreraPG = Tcarrerapostgrado1.getText().trim();
+        post.setNbre(nombre);
+        post.setDoc(documento);
+        post.setDir(direccion);
+        post.setfNac(fNac);
+        post.setFac(Tfacultad1.getText().trim());
+        post.setCar(Tcarrera1.getText().trim());
+        post.setfIng(fIng);
+        post.setReg(registro);
+        post.setcarPos(carreraPG);
+    } else if (personaSeleccionada instanceof Docente doc) {
+        String cargo = Tcargo1.getText().trim();
+        ArrayList<String> materias = new ArrayList<>();
+        for (int i = 0; i < modeloMaterias.getSize(); i++) {
+            materias.add(modeloMaterias.getElementAt(i));
+        }
+        doc.setNbre(nombre);
+        doc.setDoc(documento);
+        doc.setDir(direccion);
+        doc.setfNac(fNac);
+        doc.setFac(Tfacultad1.getText().trim());
+        doc.setCar(Tcarrera1.getText().trim());
+        doc.setfIng(fIng);
+        doc.setCargo(cargo);
+        doc.addMat(materias);
+       
+    }
 // Actualizar según tipo
         if (personaSeleccionada instanceof Alumno alumno) {
             alumno.setNbre(nombre);

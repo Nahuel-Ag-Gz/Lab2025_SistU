@@ -1042,6 +1042,7 @@ if (personaSeleccionada == null) {
         doc.setfIng(fIng);
         doc.setCargo(cargo);
         doc.addMat(materias);
+       
     }
 
     JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");

@@ -7,6 +7,9 @@ package GUI;
 import EstructuraS.ListaPersonas;
 import ObjetosU.*;
 import java.awt.Color;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
@@ -17,6 +20,8 @@ import javax.swing.JOptionPane;
 public class PantallaINFO extends javax.swing.JFrame {
     int xMouseINFO,yMouseINFO;
     private DefaultListModel<String> modeloMaterias;
+    private Persona personaSeleccionada = null;
+
     //private JList<String> Lmateriascargadas1;
     /**
      * Creates new form PantallaINFO
@@ -98,7 +103,8 @@ public class PantallaINFO extends javax.swing.JFrame {
         Lmateriascargadas1 = new javax.swing.JList<>();
         Butteliminarmateria1 = new javax.swing.JButton();
         materiascargadas1 = new javax.swing.JLabel();
-        Buttmodificar = new javax.swing.JButton();
+        Buttguardarcambios = new javax.swing.JButton();
+        Buttmodificar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -595,19 +601,33 @@ public class PantallaINFO extends javax.swing.JFrame {
 
         PtipouserINFO.add(Puseraccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 270));
 
-        Buttmodificar.setBackground(new java.awt.Color(0, 89, 124));
-        Buttmodificar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Buttmodificar.setForeground(new java.awt.Color(255, 255, 255));
-        Buttmodificar.setText("Modificar");
-        Buttmodificar.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
-        Buttmodificar.setMaximumSize(new java.awt.Dimension(160, 95));
-        Buttmodificar.setMinimumSize(new java.awt.Dimension(160, 95));
-        Buttmodificar.addActionListener(new java.awt.event.ActionListener() {
+        Buttguardarcambios.setBackground(new java.awt.Color(0, 89, 124));
+        Buttguardarcambios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Buttguardarcambios.setForeground(new java.awt.Color(255, 255, 255));
+        Buttguardarcambios.setText("Guardar Cambios");
+        Buttguardarcambios.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
+        Buttguardarcambios.setMaximumSize(new java.awt.Dimension(160, 95));
+        Buttguardarcambios.setMinimumSize(new java.awt.Dimension(160, 95));
+        Buttguardarcambios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtmodificarActionPerformed(evt);
+                ButtguardarcambiosActionPerformed(evt);
             }
         });
-        PtipouserINFO.add(Buttmodificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 160, 44));
+        PtipouserINFO.add(Buttguardarcambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 160, 44));
+
+        Buttmodificar1.setBackground(new java.awt.Color(0, 89, 124));
+        Buttmodificar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Buttmodificar1.setForeground(new java.awt.Color(255, 255, 255));
+        Buttmodificar1.setText("Modificar");
+        Buttmodificar1.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
+        Buttmodificar1.setMaximumSize(new java.awt.Dimension(160, 95));
+        Buttmodificar1.setMinimumSize(new java.awt.Dimension(160, 95));
+        Buttmodificar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Buttmodificar1ActionPerformed(evt);
+            }
+        });
+        PtipouserINFO.add(Buttmodificar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 160, 44));
 
         PanelINFO.add(PtipouserINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 910, 320));
 
@@ -636,6 +656,7 @@ public class PantallaINFO extends javax.swing.JFrame {
 
 public void mostrarPersona(Persona persona) {
     if (persona == null) return;
+    personaSeleccionada = persona;
 
     // Mostrar panel general
     PtipouserINFO.setVisible(true);
@@ -948,8 +969,114 @@ public void mostrarPersona(Persona persona) {
         }
     }//GEN-LAST:event_Butteliminarmateria1ActionPerformed
 
-    private void ButtmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtmodificarActionPerformed
-            // Habilitar campos comunes
+    private void ButtguardarcambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtguardarcambiosActionPerformed
+if (personaSeleccionada == null) {
+        JOptionPane.showMessageDialog(this, "No hay persona para modificar.");
+        return;
+    }
+
+    // Obtener datos comunes
+    String nombre = Tnombre1.getText().trim();
+    String direccion = Tdireccion1.getText().trim();
+    String documento = Tdocumento1.getText().trim();
+    int diaNac, mesNac, anioNac, diaIng, mesIng, anioIng;
+    
+    try {
+        diaNac = Integer.parseInt(Tdia1.getText());
+        mesNac = Integer.parseInt(Tmes1.getText());
+        anioNac = Integer.parseInt(Tanio1.getText());
+        diaIng = Integer.parseInt(Tdiaing1.getText());
+        mesIng = Integer.parseInt(Tmesing1.getText());
+        anioIng = Integer.parseInt(Tanioing1.getText());
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Las fechas deben contener solo números.");
+        return;
+    }
+
+    if (!fechaValida(diaNac, mesNac, anioNac) || !fechaValida(diaIng, mesIng, anioIng)) {
+        JOptionPane.showMessageDialog(this, "Fechas inválidas.");
+        return;
+    }
+
+    int[] fNac = {diaNac, mesNac, anioNac};
+    int[] fIng = {diaIng, mesIng, anioIng};
+
+    // Datos específicos
+    if (personaSeleccionada instanceof Alumno alumno) {
+        String registro = Tregistro1.getText().trim();
+        alumno.setNbre(nombre);
+        alumno.setDoc(documento);
+        alumno.setDir(direccion);
+        alumno.setfNac(fNac);
+        alumno.setFac(Tfacultad1.getText().trim());
+        alumno.setCar(Tcarrera1.getText().trim());
+        alumno.setfIng(fIng);
+        alumno.setReg(registro);
+    } else if (personaSeleccionada instanceof AlumnoPostGrado post) {
+        String registro = Tregistro1.getText().trim();
+        String carreraPG = Tcarrerapostgrado1.getText().trim();
+        post.setNbre(nombre);
+        post.setDoc(documento);
+        post.setDir(direccion);
+        post.setfNac(fNac);
+        post.setFac(Tfacultad1.getText().trim());
+        post.setCar(Tcarrera1.getText().trim());
+        post.setfIng(fIng);
+        post.setReg(registro);
+        post.setcarPos(carreraPG);
+    } else if (personaSeleccionada instanceof Docente doc) {
+        String cargo = Tcargo1.getText().trim();
+        ArrayList<String> materias = new ArrayList<>();
+        for (int i = 0; i < modeloMaterias.getSize(); i++) {
+            materias.add(modeloMaterias.getElementAt(i));
+        }
+        doc.setNbre(nombre);
+        doc.setDoc(documento);
+        doc.setDir(direccion);
+        doc.setfNac(fNac);
+        doc.setFac(Tfacultad1.getText().trim());
+        doc.setCar(Tcarrera1.getText().trim());
+        doc.setfIng(fIng);
+        doc.setCargo(cargo);
+        doc.addMat(materias);
+    }
+
+    JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");
+    
+    // Restaurar estado de edición desactivada
+    bloquearCamposEdicion();
+    Stipopersona1.setEnabled(true);
+    personaSeleccionada = null;
+    }//GEN-LAST:event_ButtguardarcambiosActionPerformed
+private void bloquearCamposEdicion() {
+    Tnombre1.setEditable(false);
+    Tdocumento1.setEditable(false);
+    Tdireccion1.setEditable(false);
+    Tdia1.setEditable(false);
+    Tmes1.setEditable(false);
+    Tanio1.setEditable(false);
+    Tfacultad1.setEditable(false);
+    Tcarrera1.setEditable(false);
+    Tdiaing1.setEditable(false);
+    Tmesing1.setEditable(false);
+    Tanioing1.setEditable(false);
+    Tregistro1.setEditable(false);
+    Tcarrerapostgrado1.setEditable(false);
+    Tcargo1.setEditable(false);
+    Tmaterias1.setEditable(false);
+    Buttcargamaterias1.setEnabled(false);
+    Butteliminarmateria1.setEnabled(false);
+}
+    private boolean fechaValida(int dia, int mes, int anio) {
+        try {
+            LocalDate.of(anio, mes, dia); // Esto lanza excepción si es inválida
+            return true;
+        } catch (DateTimeException e) {
+            return false;
+        }
+    }
+    private void Buttmodificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttmodificar1ActionPerformed
+                  // Habilitar campos comunes
         Tnombre1.setEditable(true);
         Tdocumento1.setEditable(true);
         Tdireccion1.setEditable(true);
@@ -978,22 +1105,26 @@ public void mostrarPersona(Persona persona) {
             Tcarrerapostgrado1.setEditable(true);
         } else if (tipo.equals("Docente")) {
     Tcargo1.setEditable(true);
-
-    // Asegurarse que todos los elementos estén visibles
     materia1.setVisible(true);
+
     Tmaterias1.setVisible(true);
-    Tmaterias1.setEnabled(true);
+    Tmaterias1.setEditable(true); // ✅ permitir edición
+    Tmaterias1.setEnabled(true);  // ✅ permitir interacción
+
     Buttcargamaterias1.setVisible(true);
     Buttcargamaterias1.setEnabled(true);
+
     Butteliminarmateria1.setVisible(true);
     Butteliminarmateria1.setEnabled(true);
+
     jScrollPane3.setVisible(true);
     Lmateriascargadas1.setVisible(true);
     Lmateriascargadas1.setEnabled(true);
     materiascargadas1.setVisible(true);
-        }
+}
+
         JOptionPane.showMessageDialog(this, "Puede editar los campos. Recuerde guardar los cambios.");
-    }//GEN-LAST:event_ButtmodificarActionPerformed
+    }//GEN-LAST:event_Buttmodificar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1002,7 +1133,8 @@ public void mostrarPersona(Persona persona) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buttcargamaterias1;
     private javax.swing.JButton Butteliminarmateria1;
-    private javax.swing.JButton Buttmodificar;
+    private javax.swing.JButton Buttguardarcambios;
+    private javax.swing.JButton Buttmodificar1;
     private javax.swing.JPanel HeaderINFO;
     private javax.swing.JLabel LabDatos;
     private javax.swing.JList<String> Lmateriascargadas1;

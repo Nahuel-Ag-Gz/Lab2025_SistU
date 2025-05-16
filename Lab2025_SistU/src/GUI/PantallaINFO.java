@@ -19,7 +19,8 @@ import javax.swing.JOptionPane;
  * @author nahue
  */
 public class PantallaINFO extends javax.swing.JFrame {
-    int xMouseINFO,yMouseINFO;
+
+    int xMouseINFO, yMouseINFO;
     private DefaultListModel<String> modeloMaterias;
     private Persona personaSeleccionada = null;
 
@@ -27,7 +28,7 @@ public class PantallaINFO extends javax.swing.JFrame {
     /**
      * Creates new form PantallaINFO
      */
-    public PantallaINFO(Persona p,ListaPersonas lista) {
+    public PantallaINFO(Persona p, ListaPersonas lista) {
         initComponents();
 
         modeloMaterias = new DefaultListModel<>();
@@ -655,125 +656,127 @@ public class PantallaINFO extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-public void mostrarPersona(Persona persona) {
-    if (persona == null) return;
-    personaSeleccionada = persona;
-
-    // Mostrar panel general
-    PtipouserINFO.setVisible(true);
-
-    // Ocultar todos los campos por defecto
-    SepRegist1.setVisible(false);
-    sepCargo1.setVisible(false);
-    SepCarrera1.setVisible(false);
-    setmaterias1.setVisible(false);
-    registro1.setVisible(false);
-    Tregistro1.setVisible(false);
-    carrerapostgrado1.setVisible(false);
-    Tcarrerapostgrado1.setVisible(false);
-    cargo1.setVisible(false);
-    Tcargo1.setVisible(false);
-    materia1.setVisible(false);
-    Tmaterias1.setVisible(false);
-    Buttcargamaterias1.setVisible(false);
-    jScrollPane3.setVisible(false);
-    Lmateriascargadas1.setVisible(false);
-    materiascargadas1.setVisible(false);
-    Butteliminarmateria1.setVisible(false);
-    jPanel1.setVisible(false);
-    jPanel2.setVisible(false);
-    // Campos comunes a todos
-    Tnombre1.setText(persona.getNbre());
-    Tdocumento1.setText(persona.getDoc());
-    Tdireccion1.setText(persona.getDir());
-    int[] fechaNac = persona.getfNac();
-    Tdia1.setText(String.valueOf(fechaNac[0]));
-    Tmes1.setText(String.valueOf(fechaNac[1]));
-    Tanio1.setText(String.valueOf(fechaNac[2]));
-    
-    // Desactivar campos para que no se puedan editar
-    Tnombre1.setEditable(false);
-    Tdocumento1.setEditable(false);
-    Tdireccion1.setEditable(false);
-    Tdia1.setEditable(false);
-    Tmes1.setEditable(false);
-    Tanio1.setEditable(false);
-    Tfacultad1.setEditable(false);
-    Tcarrera1.setEditable(false);
-    Tdiaing1.setEditable(false);
-    Tmesing1.setEditable(false);
-    Tanioing1.setEditable(false);
-    Tregistro1.setEditable(false);
-    Tcarrerapostgrado1.setEditable(false);
-    Tcargo1.setEditable(false);
-    Tmaterias1.setEditable(false);
-
-    // Desactivar el combo de tipo de persona
-    Stipopersona1.setEnabled(false);
-        jPanel1.setVisible(true);
-    jPanel2.setVisible(true);
-    if (persona instanceof PersUniv pu) {
-        Tfacultad1.setText(pu.getFac());
-        Tcarrera1.setText(pu.getCar());
-        int[] fechaIng = pu.getfIng();
-        Tdiaing1.setText(String.valueOf(fechaIng[0]));
-        Tmesing1.setText(String.valueOf(fechaIng[1]));
-        Tanioing1.setText(String.valueOf(fechaIng[2]));
-    }
-
-    if (persona instanceof Alumno alumno) {
-        Stipopersona1.setSelectedItem("Alumno");
-        SepRegist1.setVisible(true);
-        registro1.setVisible(true);
-        Tregistro1.setVisible(true);
-        Tregistro1.setText(alumno.getReg());
-    }
-
-    if (persona instanceof AlumnoPostGrado postgrado) {
-        Stipopersona1.setSelectedItem("Alumno de Postgrado");
-        SepRegist1.setVisible(true);
-        SepCarrera1.setVisible(true);
-        registro1.setVisible(true);
-        Tregistro1.setVisible(true);
-        Tregistro1.setText(postgrado.getReg());
-        carrerapostgrado1.setVisible(true);
-        Tcarrerapostgrado1.setVisible(true);
-        Tcarrerapostgrado1.setText(postgrado.getcarPos());
-    }
-
-    if (persona instanceof Docente docente) {
-        Stipopersona1.setSelectedItem("Docente");
-        cargo1.setVisible(true);
-        Tcargo1.setVisible(true);
-        sepCargo1.setVisible(true);
-        Tcargo1.setText(docente.getCargo());
-
-        jScrollPane3.setVisible(true);
-        Lmateriascargadas1.setVisible(true);
-        materiascargadas1.setVisible(true);
-        // Cargar materias al modelo del JList
-        modeloMaterias.clear();
-        for (String mat : docente.getMat()) {
-            modeloMaterias.addElement(mat);
+    public void mostrarPersona(Persona persona) {
+        if (persona == null) {
+            return;
         }
-    }
+        personaSeleccionada = persona;
 
-    PtipouserINFO.revalidate();
-    PtipouserINFO.repaint();
-}
+        // Mostrar panel general
+        PtipouserINFO.setVisible(true);
+
+        // Ocultar todos los campos por defecto
+        SepRegist1.setVisible(false);
+        sepCargo1.setVisible(false);
+        SepCarrera1.setVisible(false);
+        setmaterias1.setVisible(false);
+        registro1.setVisible(false);
+        Tregistro1.setVisible(false);
+        carrerapostgrado1.setVisible(false);
+        Tcarrerapostgrado1.setVisible(false);
+        cargo1.setVisible(false);
+        Tcargo1.setVisible(false);
+        materia1.setVisible(false);
+        Tmaterias1.setVisible(false);
+        Buttcargamaterias1.setVisible(false);
+        jScrollPane3.setVisible(false);
+        Lmateriascargadas1.setVisible(false);
+        materiascargadas1.setVisible(false);
+        Butteliminarmateria1.setVisible(false);
+        jPanel1.setVisible(false);
+        jPanel2.setVisible(false);
+        // Campos comunes a todos
+        Tnombre1.setText(persona.getNbre());
+        Tdocumento1.setText(persona.getDoc());
+        Tdireccion1.setText(persona.getDir());
+        int[] fechaNac = persona.getfNac();
+        Tdia1.setText(String.valueOf(fechaNac[0]));
+        Tmes1.setText(String.valueOf(fechaNac[1]));
+        Tanio1.setText(String.valueOf(fechaNac[2]));
+
+        // Desactivar campos para que no se puedan editar
+        Tnombre1.setEditable(false);
+        Tdocumento1.setEditable(false);
+        Tdireccion1.setEditable(false);
+        Tdia1.setEditable(false);
+        Tmes1.setEditable(false);
+        Tanio1.setEditable(false);
+        Tfacultad1.setEditable(false);
+        Tcarrera1.setEditable(false);
+        Tdiaing1.setEditable(false);
+        Tmesing1.setEditable(false);
+        Tanioing1.setEditable(false);
+        Tregistro1.setEditable(false);
+        Tcarrerapostgrado1.setEditable(false);
+        Tcargo1.setEditable(false);
+        Tmaterias1.setEditable(false);
+
+        // Desactivar el combo de tipo de persona
+        Stipopersona1.setEnabled(false);
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(true);
+        if (persona instanceof PersUniv pu) {
+            Tfacultad1.setText(pu.getFac());
+            Tcarrera1.setText(pu.getCar());
+            int[] fechaIng = pu.getfIng();
+            Tdiaing1.setText(String.valueOf(fechaIng[0]));
+            Tmesing1.setText(String.valueOf(fechaIng[1]));
+            Tanioing1.setText(String.valueOf(fechaIng[2]));
+        }
+
+        if (persona instanceof Alumno alumno) {
+            Stipopersona1.setSelectedItem("Alumno");
+            SepRegist1.setVisible(true);
+            registro1.setVisible(true);
+            Tregistro1.setVisible(true);
+            Tregistro1.setText(alumno.getReg());
+        }
+
+        if (persona instanceof AlumnoPostGrado postgrado) {
+            Stipopersona1.setSelectedItem("Alumno de Postgrado");
+            SepRegist1.setVisible(true);
+            SepCarrera1.setVisible(true);
+            registro1.setVisible(true);
+            Tregistro1.setVisible(true);
+            Tregistro1.setText(postgrado.getReg());
+            carrerapostgrado1.setVisible(true);
+            Tcarrerapostgrado1.setVisible(true);
+            Tcarrerapostgrado1.setText(postgrado.getcarPos());
+        }
+
+        if (persona instanceof Docente docente) {
+            Stipopersona1.setSelectedItem("Docente");
+            cargo1.setVisible(true);
+            Tcargo1.setVisible(true);
+            sepCargo1.setVisible(true);
+            Tcargo1.setText(docente.getCargo());
+
+            jScrollPane3.setVisible(true);
+            Lmateriascargadas1.setVisible(true);
+            materiascargadas1.setVisible(true);
+            // Cargar materias al modelo del JList
+            modeloMaterias.clear();
+            for (String mat : docente.getMat()) {
+                modeloMaterias.addElement(mat);
+            }
+        }
+
+        PtipouserINFO.revalidate();
+        PtipouserINFO.repaint();
+    }
     private void eXitINFOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseClicked
-     this.setVisible(false);
-     
+        this.setVisible(false);
+
     }//GEN-LAST:event_eXitINFOMouseClicked
 
     private void eXitINFOMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseEntered
-       eXitINFO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        eXitINFO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         eXitINFO.setBackground(Color.white);
         X.setForeground(Color.RED);
     }//GEN-LAST:event_eXitINFOMouseEntered
 
     private void eXitINFOMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseExited
-        eXitINFO.setBackground(new Color(0,89,124));
+        eXitINFO.setBackground(new Color(0, 89, 124));
         X.setForeground(Color.white);
     }//GEN-LAST:event_eXitINFOMouseExited
 
@@ -781,7 +784,7 @@ public void mostrarPersona(Persona persona) {
 
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
-        this.setLocation(x-xMouseINFO,y- yMouseINFO);
+        this.setLocation(x - xMouseINFO, y - yMouseINFO);
 
     }//GEN-LAST:event_HeaderINFOMouseDragged
 
@@ -973,36 +976,56 @@ public void mostrarPersona(Persona persona) {
     }//GEN-LAST:event_Butteliminarmateria1ActionPerformed
 
     private void ButtguardarcambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtguardarcambiosActionPerformed
-if (personaSeleccionada == null) {
-        JOptionPane.showMessageDialog(this, "No hay persona para modificar.");
-        return;
-    }
+        if (personaSeleccionada == null) {
+            JOptionPane.showMessageDialog(this, "No hay persona seleccionada para editar.");
+            return;
+        }
 
-    // Obtener datos comunes
-    String nombre = Tnombre1.getText().trim();
-    String direccion = Tdireccion1.getText().trim();
-    String documento = Tdocumento1.getText().trim();
-    int diaNac, mesNac, anioNac, diaIng, mesIng, anioIng;
-    
-    try {
-        diaNac = Integer.parseInt(Tdia1.getText());
-        mesNac = Integer.parseInt(Tmes1.getText());
-        anioNac = Integer.parseInt(Tanio1.getText());
-        diaIng = Integer.parseInt(Tdiaing1.getText());
-        mesIng = Integer.parseInt(Tmesing1.getText());
-        anioIng = Integer.parseInt(Tanioing1.getText());
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Las fechas deben contener solo números.");
-        return;
-    }
+// Obtener campos del formulario
+        String tipo = (String) Stipopersona1.getSelectedItem();
+        String nombre = Tnombre1.getText().trim();
+        String direccion = Tdireccion1.getText().trim();
+        String documento = Tdocumento1.getText().trim();
+        String facultad = Tfacultad1.getText().trim();
+        String carrera = Tcarrera1.getText().trim();
+        String registro = Tregistro1.getText().trim();
 
-    if (!fechaValida(diaNac, mesNac, anioNac) || !fechaValida(diaIng, mesIng, anioIng)) {
-        JOptionPane.showMessageDialog(this, "Fechas inválidas.");
-        return;
-    }
+        if (nombre.isEmpty() || documento.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Complete todos los campos obligatorios.");
+            return;
+        }
 
-    int[] fNac = {diaNac, mesNac, anioNac};
-    int[] fIng = {diaIng, mesIng, anioIng};
+        int diaNac, mesNac, anioNac, diaIng, mesIng, anioIng;
+        try {
+            diaNac = Integer.parseInt(Tdia1.getText());
+            mesNac = Integer.parseInt(Tmes1.getText());
+            anioNac = Integer.parseInt(Tanio1.getText());
+            diaIng = Integer.parseInt(Tdiaing1.getText());
+            mesIng = Integer.parseInt(Tmesing1.getText());
+            anioIng = Integer.parseInt(Tanioing1.getText());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Las fechas deben contener solo números.");
+            return;
+        }
+
+        if (!fechaValida(diaNac, mesNac, anioNac)) {
+            JOptionPane.showMessageDialog(this, "Fecha de nacimiento inválida.");
+            return;
+        }
+        if (!fechaValida(diaIng, mesIng, anioIng)) {
+            JOptionPane.showMessageDialog(this, "Fecha de ingreso inválida.");
+            return;
+        }
+
+        LocalDate fechaNacimiento = LocalDate.of(anioNac, mesNac, diaNac);
+        LocalDate fechaIngreso = LocalDate.of(anioIng, mesIng, diaIng);
+        if (fechaIngreso.isBefore(fechaNacimiento)) {
+            JOptionPane.showMessageDialog(this, "La fecha de ingreso no puede ser anterior a la fecha de nacimiento.");
+            return;
+        }
+
+        int[] fechaNac = {diaNac, mesNac, anioNac};
+        int[] fechaIngre = {diaIng, mesIng, anioIng};
 
     // Datos específicos
     if (personaSeleccionada instanceof Alumno alumno) {
@@ -1042,34 +1065,74 @@ if (personaSeleccionada == null) {
         doc.setfIng(fIng);
         doc.setCargo(cargo);
         doc.addMat(materias);
+       
+    }
+// Actualizar según tipo
+        if (personaSeleccionada instanceof Alumno alumno) {
+            alumno.setNbre(nombre);
+            alumno.setDoc(documento);
+            alumno.setDir(direccion);
+            alumno.setfNac(fechaNac);
+            alumno.setFac(facultad);
+            alumno.setCar(carrera);
+            alumno.setfIng(fechaIngre);
+            alumno.setReg(registro);
+        } else if (personaSeleccionada instanceof AlumnoPostGrado post) {
+            String carreraPG = Tcarrerapostgrado1.getText().trim();
+            post.setNbre(nombre);
+            post.setDoc(documento);
+            post.setDir(direccion);
+            post.setfNac(fechaNac);
+            post.setFac(facultad);
+            post.setCar(carrera);
+            post.setfIng(fechaIngre);
+            post.setReg(registro);
+            post.setcarPos(carreraPG);
+        } else if (personaSeleccionada instanceof Docente doc) {
+            String cargo = Tcargo1.getText().trim();
+            ArrayList<String> materias = new ArrayList<>();
+            for (int i = 0; i < modeloMaterias.getSize(); i++) {
+                materias.add(modeloMaterias.getElementAt(i));
+            }
+            doc.setNbre(nombre);
+            doc.setDoc(documento);
+            doc.setDir(direccion);
+            doc.setfNac(fechaNac);
+            doc.setFac(facultad);
+            doc.setCar(carrera);
+            doc.setfIng(fechaIngre);
+            doc.setCargo(cargo);
+            for (int i = 0; i < modeloMaterias.getSize(); i++) {
+                doc.addMat(materias.get(i));
+            }  // Asegurate de que este método reemplace materias, no agregue duplicados
+        }
+
+        JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");
+        bloquearCamposEdicion();  // Opcional: restaurar a solo lectura
+        Stipopersona1.setEnabled(true);  // Reactivar selección
+        personaSeleccionada = null;  // Limpiar referencia
+    }//GEN-LAST:event_ButtguardarcambiosActionPerformed
+
+    private void bloquearCamposEdicion() {
+        Tnombre1.setEditable(false);
+        Tdocumento1.setEditable(false);
+        Tdireccion1.setEditable(false);
+        Tdia1.setEditable(false);
+        Tmes1.setEditable(false);
+        Tanio1.setEditable(false);
+        Tfacultad1.setEditable(false);
+        Tcarrera1.setEditable(false);
+        Tdiaing1.setEditable(false);
+        Tmesing1.setEditable(false);
+        Tanioing1.setEditable(false);
+        Tregistro1.setEditable(false);
+        Tcarrerapostgrado1.setEditable(false);
+        Tcargo1.setEditable(false);
+        Tmaterias1.setEditable(false);
+        Buttcargamaterias1.setEnabled(false);
+        Butteliminarmateria1.setEnabled(false);
     }
 
-    JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");
-    
-    // Restaurar estado de edición desactivada
-    bloquearCamposEdicion();
-    Stipopersona1.setEnabled(true);
-    personaSeleccionada = null;
-    }//GEN-LAST:event_ButtguardarcambiosActionPerformed
-private void bloquearCamposEdicion() {
-    Tnombre1.setEditable(false);
-    Tdocumento1.setEditable(false);
-    Tdireccion1.setEditable(false);
-    Tdia1.setEditable(false);
-    Tmes1.setEditable(false);
-    Tanio1.setEditable(false);
-    Tfacultad1.setEditable(false);
-    Tcarrera1.setEditable(false);
-    Tdiaing1.setEditable(false);
-    Tmesing1.setEditable(false);
-    Tanioing1.setEditable(false);
-    Tregistro1.setEditable(false);
-    Tcarrerapostgrado1.setEditable(false);
-    Tcargo1.setEditable(false);
-    Tmaterias1.setEditable(false);
-    Buttcargamaterias1.setEnabled(false);
-    Butteliminarmateria1.setEnabled(false);
-}
     private boolean fechaValida(int dia, int mes, int anio) {
         try {
             LocalDate.of(anio, mes, dia); // Esto lanza excepción si es inválida
@@ -1079,7 +1142,7 @@ private void bloquearCamposEdicion() {
         }
     }
     private void Buttmodificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttmodificar1ActionPerformed
-                  // Habilitar campos comunes
+        // Habilitar campos comunes
         Tnombre1.setEditable(true);
         Tdocumento1.setEditable(true);
         Tdireccion1.setEditable(true);
@@ -1107,24 +1170,24 @@ private void bloquearCamposEdicion() {
             Tregistro1.setEditable(true);
             Tcarrerapostgrado1.setEditable(true);
         } else if (tipo.equals("Docente")) {
-    Tcargo1.setEditable(true);
-    materia1.setVisible(true);
+            Tcargo1.setEditable(true);
+            materia1.setVisible(true);
 
-    Tmaterias1.setVisible(true);
-    Tmaterias1.setEditable(true); // ✅ permitir edición
-    Tmaterias1.setEnabled(true);  // ✅ permitir interacción
+            Tmaterias1.setVisible(true);
+            Tmaterias1.setEditable(true); // ✅ permitir edición
+            Tmaterias1.setEnabled(true);  // ✅ permitir interacción
 
-    Buttcargamaterias1.setVisible(true);
-    Buttcargamaterias1.setEnabled(true);
+            Buttcargamaterias1.setVisible(true);
+            Buttcargamaterias1.setEnabled(true);
 
-    Butteliminarmateria1.setVisible(true);
-    Butteliminarmateria1.setEnabled(true);
+            Butteliminarmateria1.setVisible(true);
+            Butteliminarmateria1.setEnabled(true);
 
-    jScrollPane3.setVisible(true);
-    Lmateriascargadas1.setVisible(true);
-    Lmateriascargadas1.setEnabled(true);
-    materiascargadas1.setVisible(true);
-}
+            jScrollPane3.setVisible(true);
+            Lmateriascargadas1.setVisible(true);
+            Lmateriascargadas1.setEnabled(true);
+            materiascargadas1.setVisible(true);
+        }
 
         JOptionPane.showMessageDialog(this, "Puede editar los campos. Recuerde guardar los cambios.");
     }//GEN-LAST:event_Buttmodificar1ActionPerformed

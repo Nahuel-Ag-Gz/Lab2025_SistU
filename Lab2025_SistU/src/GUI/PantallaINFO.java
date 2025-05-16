@@ -973,84 +973,102 @@ public void mostrarPersona(Persona persona) {
     }//GEN-LAST:event_Butteliminarmateria1ActionPerformed
 
     private void ButtguardarcambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtguardarcambiosActionPerformed
-if (personaSeleccionada == null) {
-        JOptionPane.showMessageDialog(this, "No hay persona para modificar.");
-        return;
-    }
-
-    // Obtener datos comunes
-    String nombre = Tnombre1.getText().trim();
-    String direccion = Tdireccion1.getText().trim();
-    String documento = Tdocumento1.getText().trim();
-    int diaNac, mesNac, anioNac, diaIng, mesIng, anioIng;
-    
-    try {
-        diaNac = Integer.parseInt(Tdia1.getText());
-        mesNac = Integer.parseInt(Tmes1.getText());
-        anioNac = Integer.parseInt(Tanio1.getText());
-        diaIng = Integer.parseInt(Tdiaing1.getText());
-        mesIng = Integer.parseInt(Tmesing1.getText());
-        anioIng = Integer.parseInt(Tanioing1.getText());
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Las fechas deben contener solo números.");
-        return;
-    }
-
-    if (!fechaValida(diaNac, mesNac, anioNac) || !fechaValida(diaIng, mesIng, anioIng)) {
-        JOptionPane.showMessageDialog(this, "Fechas inválidas.");
-        return;
-    }
-
-    int[] fNac = {diaNac, mesNac, anioNac};
-    int[] fIng = {diaIng, mesIng, anioIng};
-
-    // Datos específicos
-    if (personaSeleccionada instanceof Alumno alumno) {
-        String registro = Tregistro1.getText().trim();
-        alumno.setNbre(nombre);
-        alumno.setDoc(documento);
-        alumno.setDir(direccion);
-        alumno.setfNac(fNac);
-        alumno.setFac(Tfacultad1.getText().trim());
-        alumno.setCar(Tcarrera1.getText().trim());
-        alumno.setfIng(fIng);
-        alumno.setReg(registro);
-    } else if (personaSeleccionada instanceof AlumnoPostGrado post) {
-        String registro = Tregistro1.getText().trim();
-        String carreraPG = Tcarrerapostgrado1.getText().trim();
-        post.setNbre(nombre);
-        post.setDoc(documento);
-        post.setDir(direccion);
-        post.setfNac(fNac);
-        post.setFac(Tfacultad1.getText().trim());
-        post.setCar(Tcarrera1.getText().trim());
-        post.setfIng(fIng);
-        post.setReg(registro);
-        post.setcarPos(carreraPG);
-    } else if (personaSeleccionada instanceof Docente doc) {
-        String cargo = Tcargo1.getText().trim();
-        ArrayList<String> materias = new ArrayList<>();
-        for (int i = 0; i < modeloMaterias.getSize(); i++) {
-            materias.add(modeloMaterias.getElementAt(i));
+        if (personaSeleccionada == null) {
+            JOptionPane.showMessageDialog(this, "No hay persona seleccionada para editar.");
+            return;
         }
-        doc.setNbre(nombre);
-        doc.setDoc(documento);
-        doc.setDir(direccion);
-        doc.setfNac(fNac);
-        doc.setFac(Tfacultad1.getText().trim());
-        doc.setCar(Tcarrera1.getText().trim());
-        doc.setfIng(fIng);
-        doc.setCargo(cargo);
-        doc.addMat(materias);
-       
-    }
 
-    JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");
-    
-    // Restaurar estado de edición desactivada
-    bloquearCamposEdicion();
-    Stipopersona1.setEnabled(true);
-    personaSeleccionada = null;
+// Obtener campos del formulario
+        String tipo = (String) Stipopersona1.getSelectedItem();
+        String nombre = Tnombre1.getText().trim();
+        String direccion = Tdireccion1.getText().trim();
+        String documento = Tdocumento1.getText().trim();
+        String facultad = Tfacultad1.getText().trim();
+        String carrera = Tcarrera1.getText().trim();
+        String registro = Tregistro1.getText().trim();
+
+        if (nombre.isEmpty() || documento.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Complete todos los campos obligatorios.");
+            return;
+        }
+
+        int diaNac, mesNac, anioNac, diaIng, mesIng, anioIng;
+        try {
+            diaNac = Integer.parseInt(Tdia1.getText());
+            mesNac = Integer.parseInt(Tmes1.getText());
+            anioNac = Integer.parseInt(Tanio1.getText());
+            diaIng = Integer.parseInt(Tdiaing1.getText());
+            mesIng = Integer.parseInt(Tmesing1.getText());
+            anioIng = Integer.parseInt(Tanioing1.getText());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Las fechas deben contener solo números.");
+            return;
+        }
+
+        if (!fechaValida(diaNac, mesNac, anioNac)) {
+            JOptionPane.showMessageDialog(this, "Fecha de nacimiento inválida.");
+            return;
+        }
+        if (!fechaValida(diaIng, mesIng, anioIng)) {
+            JOptionPane.showMessageDialog(this, "Fecha de ingreso inválida.");
+            return;
+        }
+
+        LocalDate fechaNacimiento = LocalDate.of(anioNac, mesNac, diaNac);
+        LocalDate fechaIngreso = LocalDate.of(anioIng, mesIng, diaIng);
+        if (fechaIngreso.isBefore(fechaNacimiento)) {
+            JOptionPane.showMessageDialog(this, "La fecha de ingreso no puede ser anterior a la fecha de nacimiento.");
+            return;
+        }
+
+        int[] fechaNac = {diaNac, mesNac, anioNac};
+        int[] fechaIngre = {diaIng, mesIng, anioIng};
+
+// Actualizar según tipo
+        if (personaSeleccionada instanceof Alumno alumno) {
+            alumno.setNbre(nombre);
+            alumno.setDoc(documento);
+            alumno.setDir(direccion);
+            alumno.setfNac(fechaNac);
+            alumno.setFac(facultad);
+            alumno.setCar(carrera);
+            alumno.setfIng(fechaIngre);
+            alumno.setReg(registro);
+        } else if (personaSeleccionada instanceof AlumnoPostGrado post) {
+            String carreraPG = Tcarrerapostgrado1.getText().trim();
+            post.setNbre(nombre);
+            post.setDoc(documento);
+            post.setDir(direccion);
+            post.setfNac(fechaNac);
+            post.setFac(facultad);
+            post.setCar(carrera);
+            post.setfIng(fechaIngre);
+            post.setReg(registro);
+            post.setcarPos(carreraPG);
+        } else if (personaSeleccionada instanceof Docente doc) {
+            String cargo = Tcargo1.getText().trim();
+            ArrayList<String> materias = new ArrayList<>();
+            for (int i = 0; i < modeloMaterias.getSize(); i++) {
+                materias.add(modeloMaterias.getElementAt(i));
+            }
+            doc.setNbre(nombre);
+            doc.setDoc(documento);
+            doc.setDir(direccion);
+            doc.setfNac(fechaNac);
+            doc.setFac(facultad);
+            doc.setCar(carrera);
+            doc.setfIng(fechaIngre);
+            doc.setCargo(cargo);
+            for (int i = 0; i < modeloMaterias.getSize(); i++) {
+                doc.addMat(materias.get(i));
+            }  // Asegurate de que este método reemplace materias, no agregue duplicados
+        }
+
+        JOptionPane.showMessageDialog(this, "Cambios guardados correctamente.");
+        bloquearCamposEdicion();  // Opcional: restaurar a solo lectura
+        Stipopersona1.setEnabled(true);  // Reactivar selección
+        personaSeleccionada = null;  // Limpiar referencia
+    //GEN-LAST:event_ButtguardarcambiosActionPerformed
     }//GEN-LAST:event_ButtguardarcambiosActionPerformed
 private void bloquearCamposEdicion() {
     Tnombre1.setEditable(false);

@@ -7,6 +7,7 @@ package GUI;
 import EstructuraS.ListaPersonas;
 import ObjetosU.*;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -761,10 +762,12 @@ public void mostrarPersona(Persona persona) {
     PtipouserINFO.repaint();
 }
     private void eXitINFOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseClicked
-        System.exit(0);
+     this.setVisible(false);
+     
     }//GEN-LAST:event_eXitINFOMouseClicked
 
     private void eXitINFOMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eXitINFOMouseEntered
+       eXitINFO.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         eXitINFO.setBackground(Color.white);
         X.setForeground(Color.RED);
     }//GEN-LAST:event_eXitINFOMouseEntered

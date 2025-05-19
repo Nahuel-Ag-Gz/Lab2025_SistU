@@ -498,6 +498,11 @@ public class PantallaINFO extends javax.swing.JFrame {
                 Tcarrerapostgrado1FocusLost(evt);
             }
         });
+        Tcarrerapostgrado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tcarrerapostgrado1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(Tcarrerapostgrado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 200, -1));
 
         Tmaterias1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -1068,7 +1073,7 @@ public void mostrarPersona(Persona persona) {
         bloquearCamposEdicion();  // Opcional: restaurar a solo lectura
         Stipopersona1.setEnabled(true);  // Reactivar selección
         personaSeleccionada = null;  // Limpiar referencia
-    //GEN-LAST:event_ButtguardarcambiosActionPerformed
+                                                      
     }//GEN-LAST:event_ButtguardarcambiosActionPerformed
 private void bloquearCamposEdicion() {
     Tnombre1.setEditable(false);
@@ -1147,6 +1152,10 @@ private void bloquearCamposEdicion() {
 
         JOptionPane.showMessageDialog(this, "Puede editar los campos. Recuerde guardar los cambios.");
     }//GEN-LAST:event_Buttmodificar1ActionPerformed
+
+    private void Tcarrerapostgrado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tcarrerapostgrado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Tcarrerapostgrado1ActionPerformed
 
     /**
      * @param args the command line arguments

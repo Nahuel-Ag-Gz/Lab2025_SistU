@@ -800,6 +800,11 @@ public class GUI extends javax.swing.JFrame {
                 TcarrerapostgradoFocusLost(evt);
             }
         });
+        Tcarrerapostgrado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TcarrerapostgradoActionPerformed(evt);
+            }
+        });
 
         SepCarrera.setForeground(new java.awt.Color(0, 89, 124));
 
@@ -908,8 +913,9 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(Butteliminarmateria, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PuseraccionLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                                .addComponent(jScrollPane1)
+                                .addGap(19, 19, 19)))))
+                .addGap(27, 27, 27))
         );
         PuseraccionLayout.setVerticalGroup(
             PuseraccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -950,8 +956,8 @@ public class GUI extends javax.swing.JFrame {
                                     .addComponent(Buttcargamaterias, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, 0)
                                 .addComponent(setmaterias, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
                 .addComponent(Buttcargapersona, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -968,8 +974,8 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(Pcargauser, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(PcargapersonaLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Ptipouser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(263, Short.MAX_VALUE))
+                        .addComponent(Ptipouser, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
         PcargapersonaLayout.setVerticalGroup(
             PcargapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -979,7 +985,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(Pcargauser, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Ptipouser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(376, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         Plistapersona.setBackground(new java.awt.Color(255, 255, 255));
@@ -1141,8 +1147,9 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(PlistapersonaLayout.createSequentialGroup()
                         .addComponent(scrollPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ButtActlista, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(137, Short.MAX_VALUE))
+                        .addComponent(ButtActlista, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)))
+                .addContainerGap(64, Short.MAX_VALUE))
             .addComponent(Sombralistapersona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PlistapersonaLayout.setVerticalGroup(
@@ -1159,7 +1166,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PlistapersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PlistapersonaLayout.createSequentialGroup()
-                        .addComponent(scrollPersonas, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+                        .addComponent(scrollPersonas, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
                         .addGap(25, 25, 25))
                     .addGroup(PlistapersonaLayout.createSequentialGroup()
                         .addComponent(ButtActlista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1769,7 +1776,27 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
         int y = evt.getYOnScreen();
         this.setLocation(x-xMouse,y- yMouse);
     }//GEN-LAST:event_Header1MouseDragged
+private void limpiarCampos() {
+    Tnombre.setText("Ingrese su Nombre");
+    Tdocumento.setText("Ingrese su Documento");
+    Tdireccion.setText("Ingrese su Direccion");
+    Tfacultad.setText("Ingrese su Facultad");
+    Tcarrera.setText("Ingrese su Carrera");
+    Tregistro.setText("Ingrese su Registro");
+    Tcarrerapostgrado.setText("Ingrese su Carrera");
+    Tcargo.setText("Ingrese su Cargo");
+    
+    Tdia.setText("Dia");
+    Tmes.setText("Mes");
+    Tanio.setText("Año");
+    Tdiaing.setText("Dia");
+    Tmesing.setText("Mes");
+    Tanioing.setText("Año");
+    
+    modeloMaterias.clear(); // Limpiar lista si es docente
 
+    Stipopersona.setSelectedIndex(0); // Opcional: volver a seleccionar el primer tipo
+}
     private void ButtcargapersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtcargapersonaActionPerformed
         String tipo = (String) Stipopersona.getSelectedItem();
         String nombre = Tnombre.getText().trim();
@@ -1846,10 +1873,11 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
         if (!lista.isfull()) {
             if (!lista.inStruc(nuevaPersona)) {
                 lista.insert(nuevaPersona);
+
                 System.out.println("Persona cargada con éxito: " + nuevaPersona);
                 JOptionPane.showMessageDialog(this, "Persona cargada con éxito.");
                 modeloMaterias.clear(); // Limpiar materias si era un docente
-
+                limpiarCampos(); // ← limpia todos los campos luego de insertar
             } else {
                 JOptionPane.showMessageDialog(this, "Esta persona ya está registrada.");
             }
@@ -1908,13 +1936,13 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
 
     private void TcarrerapostgradoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TcarrerapostgradoFocusLost
         if (Tcarrerapostgrado.getText().isEmpty()) {
-            Tcarrerapostgrado.setText("Ingrese su Carrera");
+            Tcarrerapostgrado.setText("Ingrese su Carrera Postgrado");
             Tcarrerapostgrado.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_TcarrerapostgradoFocusLost
 
     private void TcarrerapostgradoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TcarrerapostgradoFocusGained
-        if (Tcarrerapostgrado.getText().equals("Ingrese su Carrera")) {
+        if (Tcarrerapostgrado.getText().equals("Ingrese su Carrera Postgrado")) {
             Tcarrerapostgrado.setText("");
             Tcarrerapostgrado.setForeground(Color.BLACK);
         }
@@ -2293,6 +2321,10 @@ String docBuscado = txtDocumentoBuscar.getText().trim();
     private void ButtActlistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtActlistaActionPerformed
      mostrarListaEnGUI(lista);
     }//GEN-LAST:event_ButtActlistaActionPerformed
+
+    private void TcarrerapostgradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TcarrerapostgradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TcarrerapostgradoActionPerformed
      
     private void mostrarSoloPanel(JPanel panelMostrado) {
          Icon.setVisible(false);

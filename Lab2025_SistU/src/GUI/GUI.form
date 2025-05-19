@@ -389,10 +389,10 @@
                               <Component id="Pcargauser" min="-2" pref="710" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="Ptipouser" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Ptipouser" min="-2" pref="731" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="263" max="32767" attributes="0"/>
+                          <EmptySpace pref="218" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -404,7 +404,7 @@
                           <Component id="Pcargauser" min="-2" pref="235" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="Ptipouser" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="376" max="32767" attributes="0"/>
+                          <EmptySpace pref="17" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1088,13 +1088,14 @@
                                                   <Component id="Butteliminarmateria" min="-2" pref="79" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                                  <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1114,7 +1115,7 @@
                                           <Component id="Butteliminarmateria" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="carrerapostgrado" min="-2" max="-2" attributes="0"/>
@@ -1148,11 +1149,11 @@
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Component id="jScrollPane1" min="-2" pref="209" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="209" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Component id="Buttcargapersona" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1244,6 +1245,7 @@
                           <Events>
                             <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="TcarrerapostgradoFocusGained"/>
                             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="TcarrerapostgradoFocusLost"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TcarrerapostgradoActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JSeparator" name="SepCarrera">
@@ -1431,9 +1433,10 @@
                                   <Component id="scrollPersonas" min="-2" pref="710" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="ButtActlista" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="137" max="32767" attributes="0"/>
+                          <EmptySpace pref="64" max="32767" attributes="0"/>
                       </Group>
                       <Component id="Sombralistapersona" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -1455,7 +1458,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="scrollPersonas" pref="1080" max="32767" attributes="0"/>
+                                  <Component id="scrollPersonas" pref="520" max="32767" attributes="0"/>
                                   <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
